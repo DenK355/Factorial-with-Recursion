@@ -8,7 +8,7 @@
 
 function factorial(num){
 
-    if(num < 0 || typeof num !== 'number' || num === NaN) return NaN;
+    if(num < 0 || typeof num !== 'number' || Number.isNaN(num) === true) return NaN;
 
     if(num === 0 || num === 1) return 1;
 
@@ -16,7 +16,7 @@ function factorial(num){
 
 }
 
-console.log(factorial(5));
+console.log(factorial(NaN));
 console.log(factorial(3));
 console.log(factorial(2));
 console.log(factorial(6));
